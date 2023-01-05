@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #d1d1d1;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#warp{
+    width: 1000px;
+    min-height: 450px;
+    background: #fff;
+    margin: 100px auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+#head h1{
+    background: teal;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 25px;
+}
+
+input{
+    display: block;
+    margin: auto;
+    padding: 10px 10px;
+    background: purple;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+#model-mode{
+    display: none;
+}
+
+#main-content {
+    width: 90%;
+    margin:20px auto;
+    padding: 20px;
+    background-color: #d1d1d1;
+}
+
+#developer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: -30px;
+    left: 0;
+    
+}
+
+/* start model */
+
+#model #backdrop{
+background: rgba(0, 0, 0, 0.8);
+width: 100vw;
+height: 100vh;
+position: absolute;
+top: 0; left: 0;
+visibility: hidden;
+opacity: 0;
+transition: all 0.3s ease;
+}
+
+#model-mode:checked ~ #model #backdrop{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#model #model-content{
+    width: 400px;
+    height: 250px;
+    background: #fff;
+    padding: 20px;
+    padding-top: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    left: 40%;
+    border: 1px solid rgb(1, 67, 67);
+    z-index: 10;
+    visibility: hidden;
+    transform:  rotate(90deg) scale(0);
+    transition: all 0.3s ease;
+}
+
+
+#model-mode:checked ~ #model #model-content{
+    visibility: visible;
+    transform: rotate(0deg) scale(1);
+    transition: all 0.3s ease;
+}
+
+/* #model-mode:not(checked) ~ #model #model-content{
+    visibility: hidden;
+    transform: translateY(-500px);
+    transition: all 0.5s ease;
+} */
+
+
+#model #model-content h2,hr{
+    color: rgb(1, 67, 67);
+}
+
+
+#model #model-content hr {
+     height: 3px;
+     background-color: rgb(1, 67, 67);
+     border: none;
+     }
+    
+#model #model-content p {
+    text-align: justify;
+}
+
+#model #model-content button{
+    float: right;
+    padding: 7px 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background: rgb(1, 67, 67);
+    cursor: pointer;
+}
+
+#model #model-content button::after{
+    content: "OK";   
+}
+
+#model #model-content button:hover::after{
+    content: "CLOSE";    
+}

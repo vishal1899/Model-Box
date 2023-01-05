@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #d1d1d1;
+}
+
+#warp{
+    width: 1000px;
+    margin: 50px auto;
+    min-height: 500px;
+    background: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#warp #header{
+    width: 100%;
+    background: #004d40;
+}
+
+#warp #header h1{
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    text-transform: uppercase;
+}
+
+/* model start */
+
+#warp #model-div #model-mode{ display: none;}
+
+#warp #model-div #open-btn{
+    display: block;
+    width: 100px;
+    background: teal;
+    margin: 0 auto;
+    padding: 8px 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#warp #model-div #open-btn:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+
+#warp #model-div #backdrop{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    z-index: 10;
+}
+
+#warp #model-div #model-mode:checked ~ #backdrop{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+#warp #model-div #model-box{
+    width: 400px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    position: fixed;
+    top: 5%;
+    left: calc(50% - 200px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    z-index: 999;
+}
+
+#warp #model-div #model-mode:checked ~ #model-box{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+#warp #model-div #model-box h2{
+    margin: 0;
+    padding: 5px;
+    text-transform: uppercase;
+    color: rgb(8, 78, 106);
+}
+
+#warp #model-div #model-box hr{ 
+    background: rgb(8, 78, 106);
+    height: 3px;
+    border: none;
+}
+
+#warp #model-div #model-box p{
+    text-align: justify;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#warp #model-div #model-box #close-btn{
+    display: block;
+    width: 60px;
+    float: right;
+    text-transform: uppercase;
+    background: rgb(8, 78, 106);
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#warp #model-div #model-box #close-btn:hover{
+    background: rgb(47, 111, 136);
+}
+
+
+#warp #info-content{
+    width: 90%;
+    min-height: 250px;
+    background: #e6e4e4;
+    box-sizing: border-box;
+    margin: 25px auto;
+    padding: 10px 25px;
+}
+
+#warp #developer{
+    width: 100%;
+    margin: 0;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#warp #developer p{
+    color: #fff;
+    font-style: italic;
+    font-weight: 400;
+}
+
